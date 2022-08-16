@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1660609796 source:d:\arquivos\codigos\codeblocks\dominoteste\main.c
+	"control.c"
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+
+1660609543 source:d:\arquivos\codigos\codeblocks\dominoteste\model.c
+
+1660609627 source:d:\arquivos\codigos\codeblocks\dominoteste\view.c
+	"viewHeader.h"
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+
+1660609722 d:\arquivos\codigos\codeblocks\dominoteste\viewheader.h
+
+1660609831 source:d:\arquivos\codigos\codeblocks\dominoteste\control.c
+	"model.c"
+	"controlHeader.h"
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+
+1660609543 d:\arquivos\codigos\codeblocks\dominoteste\model.c
+
+1660609719 d:\arquivos\codigos\codeblocks\dominoteste\controlheader.h
+
+1660609627 d:\arquivos\codigos\codeblocks\dominoteste\view.c
+	"viewHeader.h"
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+
+1660609831 d:\arquivos\codigos\codeblocks\dominoteste\control.c
+	"model.c"
+	"controlHeader.h"
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+

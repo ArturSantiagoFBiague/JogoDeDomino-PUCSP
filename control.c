@@ -1,30 +1,16 @@
-/*
-JOGO DE DOMINO
-Nome: Felipe Farinelli Itri, Artur Santiago.
-Prof.:Julio Arakaki
-*/
-
+#include "model.c"
+#include "controlHeader.h"
+#include "view.c"
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
 
-//cria um conjunto de variaveis(criando a v√°riavel pe√ßa)
-typedef struct _peca{
-    int le;
-    int ld;
-} peca;
-
-//declara√ß√£o das vari√°veis
-peca pecasDomino[28];
-peca pecasjogo[28];
-int a = 0,b = 0, c = 0;
-
-//estrutura de cria√ß√£o das pe√ßas
+//estrutura de criaÁ„o das peÁas
 int criandoPeca(){
-    c = 0;
-    //cria√ß√£o das pe√ßas e mostrando na tela
-    for ( a = 0 ; a < 7 ; a++){
-        for ( b = a ; b < 7 ; b++){
+   c = 0;
+    //criaÁ„o das peÁas e mostrando na tela
+    for ( int a = 0 ; a < 7 ; a++){
+        for (b = a ; b < 7 ; b++){
             pecasDomino[c].le = a;
             pecasDomino[c].ld = b;
 
@@ -34,9 +20,9 @@ int criandoPeca(){
     }
 }
 
-//estrutura de reorganiza√ß√£o de pe√ßas
+//estrutura de reorganizaÁ„o de peÁas
 int ReorganizarPeca(){
-    //cria√ß√£o das pe√ßas e mostrando na tela
+    //criaÁ„o das peÁas e mostrando na tela
     c = 0;
     for ( a = 0 ; a < 7 ; a++){
         for ( b = a ; b < 7 ; b++){
@@ -49,9 +35,9 @@ int ReorganizarPeca(){
     printf("\n*PECAS REORGANIZADAS*\n");
 }
 
-//estrutura de embaralhamento de pe√ßas
+//estrutura de embaralhamento de peÁas
 int embaralharPeca(){
-    //exibi√ß√£o das pe√ßas embaralhadas
+    //exibiÁ„o das peÁas embaralhadas
     int a= 0, b = 0, c = 0, test = 0;
     int embaralha[28];
 
@@ -61,7 +47,7 @@ int embaralharPeca(){
     embaralha[0] = rand() %28;
     a = 1;
 
-    //cria n√∫mero aleat√≥rio sem repetir
+    //cria n˙mero aleatÛrio sem repetir
     srand(time(NULL));
 
     while ( a < 28 )
@@ -91,9 +77,9 @@ int embaralharPeca(){
     printf("\n\n*PECAS EMBARALHADAS** ");
 }
 
-//estrutura de exibi√ß√£o das pe√ßas
+//estrutura de exibiÁ„o das peÁas
 int exibindoPeca(){
-    // exibi√ß√£o das pe√ßas alinhadas
+    // exibiÁ„o das peÁas alinhadas
     printf(" \n\n\n*Pecas do DOMINO** ");
 
     for (int a = 0 ; a < 28 ; a++){
@@ -102,15 +88,17 @@ int exibindoPeca(){
     printf("\n*PECAS MOSTRADAS**");
 }
 
-//menu
-int main(){
-    //Declaracao de Variaveis de controle Laco e Menu.
-    int mode, sair = 1;
+//chamar Menu/switch
+int chamarSwitch(){
+    int sair = 1;
+    int mode;
+
     while(sair!=0){
 
-        //Continuar a Jogar*- A FAZER -\n3) Salvar Jogo- A FAZER -\n4) Carregar Jogo- A FAZER -\n5) Regras do jogo- A FAZER -*\n6) Sair do jogo.\n");
-        printf("\n\nIniciar Domino(PUC-SP):\n1) Iniciar Novo Jogo.\n2)Embaralhar Pecas.\n3) Reorganizar Pecas\n4)Mostrar Pecas\n5) Sair.\n");
+
+        mostraMenu();
         scanf("%d", &mode);
+
 
         switch(mode){
 
@@ -137,5 +125,4 @@ int main(){
 
         }
     }
-    return 0;
 }
